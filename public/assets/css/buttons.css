@@ -1,0 +1,640 @@
+/* Button */
+.asidebtn {
+    background-color: var(--secondary);
+    color: var(--label);
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.listtdicon {
+    background-color: transparent;
+    border: none;
+}
+
+.asidebtn.active {
+    background-color: var(--main);
+    color: var(--secondary) !important;
+}
+
+.asidebtn:hover .default {
+    display: none !important;
+}
+
+.asidebtn:hover .hidden {
+    display: block !important;
+}
+
+.formbtn,
+.headbtn,
+.listbtn,
+.addbtn,
+.deletebtn,
+.deletelistbtn,
+.listtdbtn,
+.modalbtn {
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.modalbtn {
+    background-color: var(--main);
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: var(--fw-lg);
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    padding: 5px 30px;
+}
+
+/* Button Hover */
+.asidebtn:hover {
+    background-color: var(--main);
+    color: var(--secondary) !important;
+}
+
+.formbtn:hover,
+a .formbtn:hover {
+    background-color: var(--secondary);
+    color: var(--main);
+}
+
+.headbtn:hover,
+a .headbtn:hover {
+    background-color: var(--main);
+    color: var(--secondary);
+}
+
+.listbtn:hover {
+    background-color: var(--main);
+    color: var(--secondary);
+}
+
+.addbtn:hover {
+    background-color: var(--secondary);
+    color: var(--main);
+}
+
+.deletebtn:hover,
+.deletelistbtn:hover {
+    background-color: var(--secondary);
+    color: var(--main);
+}
+
+.listtdbtn:hover {
+    background-color: transparent;
+    color: var(--main);
+}
+
+.modalbtn:hover {
+    background-color: var(--secondary);
+    color: var(--main);
+}
+
+.profiletabs.active,
+.profiletabs:hover {
+    background-color: var(--main);
+    color: var(--secondary) !important;
+}
+
+.dashtabs:hover,
+.dashtabsactive {
+    background-color: var(--main);
+    color: var(--secondary);
+}
+
+.taskassignbtn:hover,
+.taskclosebtn:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+@media screen and (min-width: 1140px) {
+
+    /* Form Button */
+    .formbtn {
+        background-color: var(--main);
+        color: var(--secondary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+        border: 1px solid var(--main);
+        border-radius: 5px;
+        padding: 5px 50px;
+    }
+
+    /* Profile Button */
+    .headbtn {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+        border: 1px solid var(--main);
+        border-radius: 5px;
+        padding: 5px 50px;
+    }
+
+    /* List Button */
+    .listbtn {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 15px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 4px 15px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    /* Add Button */
+    .addbtn {
+        background-color: var(--green);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: var(--fw-xl);
+        border: none;
+        padding: 3px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--green);
+        transition: var(--transition);
+    }
+
+    /* Delete Button */
+    .deletebtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 3px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--red);
+        transition: var(--transition);
+    }
+
+    /* Delete List Button */
+    .deletelistbtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 0px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--red);
+        transition: var(--transition);
+    }
+
+    /* List td Button */
+    .listtdbtn {
+        background-color: var(--main);
+        color: var(--secondary);
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        border: none;
+        padding: 1px 10px;
+        border-radius: 3px;
+        border: 1px solid var(--main);
+        transition: var(--transition);
+    }
+
+    /* Accordion Button */
+    .accordion-button {
+        background-color: var(--secondary);
+        color: var(--primary);
+        box-shadow: var(--box-shadow);
+        font-size: 15px;
+        font-weight: var(--fw-sm);
+    }
+
+    /* Profile Tabs */
+    .profiletabs {
+        border: none;
+        border-radius: 20px;
+        padding: 5px 25px;
+        font-size: 15px;
+        font-weight: var(--fw-sm);
+        color: var(--primary) !important;
+        background-color: transparent;
+        transition: var(--transition);
+    }
+
+    /* Dashboard Button */
+    .dashtabs {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 14px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--main);
+        height: 35px;
+        border-radius: 5px;
+        width: 150px;
+        transition: var(--transition);
+    }
+
+    /* Task Stages Button */
+    /* Assign Button */
+    .taskassignbtn {
+        background-color: var(--green);
+        color: var(--secondary);
+        font-size: 9px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--green);
+        padding: 2px 5px;
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* Close Button */
+    .taskclosebtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 9px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--red);
+        padding: 2px 5px;
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1140px) {
+
+    /* Form Button */
+    .formbtn {
+        background-color: var(--main);
+        color: var(--secondary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+        border: 1px solid var(--main);
+        border-radius: 5px;
+        padding: 5px 35px;
+    }
+
+    /* Profile Button */
+    .headbtn,
+    a .headbtn {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+        border: 1px solid var(--main);
+        border-radius: 5px;
+        padding: 5px 35px;
+    }
+
+    /* List Button */
+    .listbtn {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 15px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 4px 15px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    /* Add Button */
+    .addbtn {
+        background-color: var(--green);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: var(--fw-lg);
+        border: none;
+        padding: 4px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--green);
+        transition: var(--transition);
+    }
+
+    /* Delete Button */
+    .deletebtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 3px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--red);
+        transition: var(--transition);
+    }
+
+    /* Delete List Button */
+    .deletelistbtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 0px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--red);
+        transition: var(--transition);
+    }
+
+    /* List td Button */
+    .listtdbtn {
+        background-color: var(--main);
+        color: var(--secondary);
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        border: none;
+        padding: 1px 10px;
+        border-radius: 3px;
+        border: 1px solid var(--main);
+        transition: var(--transition);
+    }
+
+    /* Accordion Button */
+    .accordion-button {
+        background-color: var(--secondary);
+        color: var(--primary);
+        box-shadow: var(--box-shadow);
+        font-weight: var(--fw-sm);
+        font-size: 15px;
+    }
+
+    /* Profile Tabs */
+    .profiletabs {
+        border: none;
+        border-radius: 20px;
+        padding: 5px 25px;
+        font-size: 13px;
+        font-weight: var(--fw-sm);
+        color: var(--primary) !important;
+        background-color: transparent;
+        transition: var(--transition);
+    }
+
+    /* Dashboard Button */
+    .dashtabs {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 14px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--main);
+        height: 35px;
+        border-radius: 5px;
+        width: 150px;
+        transition: var(--transition);
+    }
+
+    /* Task Stages Button */
+    /* Assign Button */
+    .taskassignbtn {
+        background-color: var(--green);
+        color: var(--secondary);
+        font-size: 9px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--green);
+        padding: 2px 5px;
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* Close Button */
+    .taskclosebtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 9px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--red);
+        padding: 2px 5px;
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Form Button */
+    .formbtn {
+        background-color: var(--main);
+        color: var(--secondary);
+        font-size: 13px;
+        font-weight: var(--fw-md);
+        border: 1px solid var(--main);
+        border-radius: 5px;
+        padding: 5px 25px;
+    }
+
+    /* Profile Button */
+    .headbtn {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 13px;
+        font-weight: var(--fw-md);
+        border: 1px solid var(--main);
+        border-radius: 5px;
+        padding: 5px 25px;
+    }
+
+    /* List Button */
+    .listbtn {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 13px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 4px 15px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    /* Add Button */
+    .addbtn {
+        background-color: var(--green);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: var(--fw-lg);
+        border: none;
+        padding: 4px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--green);
+        transition: var(--transition);
+    }
+
+    /* Delete Button */
+    .deletebtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 3px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--red);
+        transition: var(--transition);
+    }
+
+    /* Delete List Button */
+    .deletelistbtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 10px;
+        font-weight: var(--fw-md);
+        border: none;
+        padding: 0px 15px;
+        border-radius: 3px;
+        border: 2px solid var(--red);
+        transition: var(--transition);
+    }
+
+    /* List td Button */
+    .listtdbtn {
+        background-color: var(--main);
+        color: var(--secondary);
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        border: none;
+        padding: 1px 10px;
+        border-radius: 3px;
+        border: 1px solid var(--main);
+        transition: var(--transition);
+    }
+
+    /* Accordion Button */
+    .accordion-button {
+        background-color: var(--secondary);
+        color: var(--primary);
+        box-shadow: var(--box-shadow);
+        font-size: 15px;
+        font-weight: var(--fw-sm);
+    }
+
+    /* Profile Tabs */
+    .profiletabs {
+        border: none;
+        border-radius: 20px;
+        padding: 5px 25px;
+        font-size: 15px;
+        font-weight: var(--fw-sm);
+        color: var(--primary) !important;
+        background-color: transparent;
+        transition: var(--transition);
+        margin: 0px auto 8px auto;
+    }
+
+    /* Dashboard Button */
+    .dashtabs {
+        background-color: var(--secondary);
+        color: var(--main);
+        font-size: 13px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--main);
+        height: 30px;
+        border-radius: 5px;
+        padding: 5px 8px;
+        transition: var(--transition);
+    }
+
+    /* Task Stages Button */
+    /* Assign Button */
+    .taskassignbtn {
+        background-color: var(--green);
+        color: var(--secondary);
+        font-size: 9px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--green);
+        padding: 2px 5px;
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* Close Button */
+    .taskclosebtn {
+        background-color: var(--red);
+        color: var(--secondary);
+        font-size: 9px;
+        font-weight: var(--fw-sm);
+        border: 1px solid var(--red);
+        padding: 2px 5px;
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+}
+
+/* HeadBtns */
+@media screen and (min-width: 1400px) {
+    .headbtns {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+    }
+
+    .tabbtns {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1140px) and (max-width: 1400px) {
+    .headbtns {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+    }
+
+    .tabbtns {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1140px) {
+    .headbtns {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        align-items: center;
+        justify-content: start;
+    }
+
+    .tabbtns {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .headbtns {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headbtns div {
+        margin: 10px auto !important;
+    }
+
+    .tabbtns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tabbtns div {
+        margin: 10px auto !important;
+    }
+}

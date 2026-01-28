@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--secondary);
+    font-family: var(--main-font);
+    font-weight: var(--fw-md);
+    width: 100%;
+    /* user-select: none; */
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #228BE6;
+}
+
+/* Hide number input arrows for Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide number input arrows for Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+label span {
+    color: var(--mandatory);
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+    cursor: pointer;
+}
+
+html::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: 3px solid #f4f4f4;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main);
+}
+
+/* Toastr CSS */
+.swal2-popup.swal2-toast {
+    padding: 15px;
+    align-items: center;
+}
+
+.swal2-popup {
+    display: grid;
+    grid-template-columns: 15% 82%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swal2-title {
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+}

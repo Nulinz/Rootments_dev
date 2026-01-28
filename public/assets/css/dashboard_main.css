@@ -1,0 +1,534 @@
+.apexcharts-toolbar {
+    display: none !important;
+}
+
+@media screen and (min-width: 1140px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header select {
+        border: 1px solid var(--input-border);
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+    }
+
+    .cardshead select {
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        width: 40%;
+        padding: 4px 10px;
+    }
+
+    .header .storename h3 {
+        font-weight: var(--fw-xl);
+        font-size: 17px;
+        text-transform: uppercase;
+        color: var(--tdata);
+    }
+
+    .sidebodydiv .container .row .cards .cardsdiv {
+        padding: 15px;
+        background-color: var(--secondary);
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        height: 400px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .sidebodydiv .container .row .col-xl-12 .cardsdiv {
+        padding: 15px;
+        background-color: var(--secondary);
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        height: 500px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    #map {
+        height: 470px;
+        width: 100%;
+    }
+
+    .sidebodydiv .container .row .cards .cardsdiv::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebodydiv .container .row .col-md-3,
+    .sidebodydiv .container .row .col-md-4,
+    .sidebodydiv .container .row .col-md-6 {
+        padding-right: 0px;
+    }
+
+    .sidebodydiv .sdbdysearch {
+        border: 1px solid var(--input-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary);
+        border-radius: 5px;
+        height: 37px;
+    }
+
+    .sidebodydiv .sdbdysearch input {
+        background-color: var(--secondary);
+    }
+
+    .sdbdysearch button {
+        width: 15%;
+        background-color: var(--thead);
+        color: var(--secondary);
+        border: none;
+        height: 37px;
+        border-radius: 0px 5px 5px 0px;
+        margin: 0;
+    }
+
+    .sdbdysearch input {
+        width: 85%;
+        height: 36px;
+    }
+
+    /* Card CSS */
+    .cardshead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .card1h6 {
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+
+    .card2h6 {
+        font-size: 13px;
+        font-weight: var(--fw-lg);
+        color: var(--thead);
+    }
+
+    .card2h6 span {
+        font-weight: var(--fw-xl);
+        font-size: 14px;
+        color: var(--primary);
+    }
+
+    /* Dashboard Card Table */
+    .cardtable .table {
+        --bs-table-bg: var(--secondary) !important;
+    }
+
+    .cardtable .table th {
+        color: var(--primary);
+        font-weight: var(--fw-lg);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .cardtable .table td {
+        color: var(--primary);
+        font-weight: var(--fw-sm);
+        font-size: 10px;
+    }
+
+    .cardtable .table h5 {
+        color: var(--primary);
+        font-weight: var(--fw-md);
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .cardtable .table h6 {
+        color: var(--aside-li);
+        font-weight: var(--fw-sm);
+        font-size: 9px;
+    }
+
+    .cardtable .table button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .cardtable img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+
+    /* Accodrion Cards */
+    .cardsdiv .accordion-button {
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid var(--primary);
+        color: var(--primary);
+        box-shadow: none !important;
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        text-transform: capitalize;
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1140px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header select {
+        border: 1px solid var(--input-border);
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+        height: 35px;
+    }
+
+    .cardshead select {
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        width: 40%;
+        padding: 4px 10px;
+    }
+
+    .header .storename h3 {
+        font-weight: var(--fw-xl);
+        font-size: 15px;
+        text-transform: uppercase;
+        color: var(--tdata);
+    }
+
+    .sidebodydiv .container .row .cards .cardsdiv {
+        padding: 15px 5px;
+        background-color: var(--secondary);
+        box-shadow: var(--box-shadow);
+        z-index: 0;
+        border-radius: 5px;
+        height: 350px;
+        overflow: auto;
+    }
+
+    .sidebodydiv .container .row .cards .cardsdiv::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebodydiv .container .row .col-md-3,
+    .sidebodydiv .container .row .col-md-4,
+    .sidebodydiv .container .row .col-md-6 {
+        padding-right: 0px;
+    }
+
+    .sidebodydiv .container {
+        margin: auto 0px;
+    }
+
+    .sidebodydiv .sdbdysearch {
+        border: 1px solid var(--input-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary);
+        border-radius: 5px;
+        height: 30px;
+    }
+
+    .sidebodydiv .sdbdysearch input {
+        background-color: var(--secondary);
+    }
+
+    .sdbdysearch button {
+        width: 15%;
+        background-color: var(--thead);
+        color: var(--secondary);
+        border: none;
+        height: 29px;
+        border-radius: 0px 5px 5px 0px;
+        margin: 0;
+    }
+
+    .sdbdysearch input {
+        width: 85%;
+        height: 28px;
+    }
+
+    /* Card CSS */
+    .cardshead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .card1h6 {
+        font-size: 13px;
+        font-weight: var(--fw-xl);
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+
+    .card2h6 {
+        font-size: 10px;
+        font-weight: var(--fw-md);
+    }
+
+    .card2h6 span {
+        font-weight: var(--fw-xl);
+        font-size: 10px;
+        color: var(--primary);
+    }
+
+    /* Dashboard Card Table */
+    .cardtable .table {
+        --bs-table-bg: var(--secondary) !important;
+    }
+
+    .cardtable .table th {
+        color: var(--primary);
+        font-weight: var(--fw-lg);
+        font-size: 9px;
+        text-transform: uppercase;
+    }
+
+    .cardtable .table td {
+        color: var(--primary);
+        font-weight: var(--fw-sm);
+        font-size: 9px;
+    }
+
+    .cardtable .table h5 {
+        color: var(--primary);
+        font-weight: var(--fw-md);
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .cardtable .table h6 {
+        color: var(--aside-li);
+        font-weight: var(--fw-sm);
+        font-size: 8px;
+    }
+
+    .cardtable img {
+        width: 25px;
+        height: 25px;
+         object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+
+    .cardtable .table button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .apexcharts-legend {
+        top: 220px !important;
+    }
+
+    /* Accodrion Cards */
+    .cardsdiv .accordion-button {
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid var(--primary);
+        color: var(--primary);
+        box-shadow: none !important;
+        font-size: 10px;
+        font-weight: var(--fw-sm);
+        text-transform: capitalize;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header select {
+        border: 1px solid var(--input-border);
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+        height: 38px;
+    }
+
+    .cardshead select {
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        width: 40%;
+        padding: 4px 10px;
+    }
+
+    .header .storename {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .header .storename h3 {
+        font-weight: var(--fw-xl);
+        font-size: 15px;
+        text-transform: uppercase;
+        color: var(--tdata);
+        text-align: center !important;
+    }
+
+    .sidebodydiv .container .row .cards .cardsdiv {
+        padding: 15px 5px;
+        background-color: var(--secondary);
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        height: 400px;
+        overflow: auto;
+    }
+
+    .sidebodydiv .container .row .cards .cardsdiv::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebodydiv .container {
+        margin: auto 0px;
+    }
+
+    .sidebodydiv .sdbdysearch {
+        border: 1px solid var(--input-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary);
+        border-radius: 5px;
+        height: 25px;
+        width: 90%;
+    }
+
+    .sidebodydiv .sdbdysearch input {
+        background-color: var(--secondary);
+    }
+
+    .sdbdysearch button {
+        width: 15%;
+        background-color: var(--thead);
+        color: var(--secondary);
+        border: none;
+        height: 25px;
+        border-radius: 0px 5px 5px 0px;
+        margin: 0;
+    }
+
+    .sdbdysearch input {
+        width: 85%;
+        height: 23px;
+    }
+
+    /* Card CSS */
+    .cardshead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .card1h6 {
+        font-size: 13px;
+        font-weight: var(--fw-xl);
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+
+    .card2h6 {
+        font-size: 12px;
+        font-weight: var(--fw-md);
+    }
+
+    .card2h6 span {
+        font-weight: var(--fw-xl);
+        font-size: 13px;
+        color: var(--primary);
+    }
+
+    /* Dashboard Card Table */
+    .cardtable .table {
+        --bs-table-bg: var(--secondary) !important;
+    }
+
+    .cardtable .table th {
+        color: var(--primary);
+        font-weight: var(--fw-lg);
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .cardtable .table td {
+        color: var(--primary);
+        font-weight: var(--fw-sm);
+        font-size: 10px;
+    }
+
+    .cardtable .table h5 {
+        color: var(--primary);
+        font-weight: var(--fw-md);
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+
+    .cardtable .table h6 {
+        color: var(--aside-li);
+        font-weight: var(--fw-sm);
+        font-size: 7px;
+    }
+
+    .cardtable img {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+
+    .cardtable .table button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .apexcharts-legend {
+        top: 270px !important;
+    }
+
+    /* Accodrion Cards */
+    .cardsdiv .accordion-button {
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid var(--primary);
+        color: var(--primary);
+        box-shadow: none !important;
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        text-transform: capitalize;
+    }
+
+}

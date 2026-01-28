@@ -1,0 +1,308 @@
+/* Laptop View 1 */
+@media screen and (min-width: 1140px) {
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        background-color: var(--secondary);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        z-index: 100 !important;
+        /* box-shadow: 0 0 2rem 0 rgba(33, 37, 41, .1); */
+    }
+
+    .navbar .icons {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    .navbar .icons .headimg {
+        background-color: var(--secondary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .icons .user,
+    .offcanvas-header .user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .icons .user img,
+    .offcanvas-header .user img {
+        z-index: 10;
+        object-fit: contain;
+        object-position: center;
+        background-color: #eee;
+    }
+
+    .navbar .icons .user h6,
+    .offcanvas-header .user h6 {
+        font-size: 8px;
+        margin-left: -10px !important;
+        z-index: 5;
+        color: var(--secondary);
+        background-color: var(--main);
+        box-shadow: var(--box-shadow);
+        border-radius: 0px 5px 5px 0px;
+        padding: 4px 0px;
+        text-transform: capitalize;
+    }
+
+    .navbar .icons i {
+        font-size: 25px;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navigation-icon,
+    .navlogo {
+        display: none;
+    }
+
+    .navbar .inputs select {
+        border: 1px solid var(--input-border);
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+    }
+
+    /* --------------------------------------------------- */
+
+}
+
+/* Tablet View 1 */
+@media screen and (min-width:767px) and (max-width:1140px) {
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        background-color: var(--secondary);
+        display: block !important;
+        justify-content: space-between;
+        padding: 10px !important;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        z-index: 999 !important;
+    }
+
+    .navbar .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .icons .headimg {
+        background-color: var(--secondary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .icons .user,
+    .offcanvas-header .user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .icons .user img,
+    .offcanvas-header .user img {
+        z-index: 10;
+        object-fit: contain;
+        object-position: center;
+        background-color: #eee;
+    }
+
+    .navbar .icons .user h6,
+    .offcanvas-header .user h6 {
+        font-size: 8px;
+        margin-left: -10px !important;
+        z-index: 5;
+        color: var(--secondary);
+        background-color: var(--main);
+        box-shadow: var(--box-shadow);
+        border-radius: 0px 5px 5px 0px;
+        padding: 4px 0px;
+        text-transform: capitalize;
+    }
+
+    .navbar .icons i {
+        font-size: 25px;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
+    }
+
+    .responsive_button,
+    #navigation-button,
+    .navlogo {
+        background-color: transparent;
+    }
+
+    .navbar .inputs select {
+        border: 1px solid var(--input-border);
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+    }
+
+    /* --------------------------------------------------- */
+
+}
+
+/* Mobile View 2 */
+@media screen and (max-width:767px) {
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        background-color: var(--secondary);
+        display: block !important;
+        padding: 10px 0px !important;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        border-bottom: 1px solid var(--secondary);
+        z-index: 999 !important;
+    }
+
+    .navbar .navlogo img {
+        height: 35px;
+    }
+
+    .navbar .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .icons .headimg {
+        display: none !important;
+    }
+
+    .navbar .icons .user {
+        display: none;
+    }
+
+    .offcanvas-header .user {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .offcanvas-header .user img {
+        z-index: 10;
+        object-fit: contain;
+        object-position: center;
+        background-color: #eee;
+    }
+
+    .offcanvas-header .user h6 {
+        font-size: 8px;
+        margin-left: -10px !important;
+        z-index: 5;
+        color: var(--secondary);
+        background-color: var(--main);
+        box-shadow: var(--box-shadow);
+        border-radius: 0px 5px 5px 0px;
+        padding: 4px 0px;
+        text-transform: capitalize;
+    }
+
+    .navbar .icons i {
+        font-size: 18px;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 8px;
+    }
+
+    .responsive_button,
+    #navigation-button,
+    .navlogo {
+        background-color: transparent;
+    }
+
+    .navbar .inputs select {
+        border: 1px solid var(--input-border);
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: var(--fw-md);
+    }
+
+    /* --------------------------------------------------- */
+
+}
+
+/* Theme Switch CSS */
+.switch-container {
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+.switch-container input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-container .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--secondary);
+    transition: background-color 0.5s;
+    border-radius: 30px;
+    border: 2px solid var(--input-border);
+}
+
+.switch-container .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 10%;
+    box-shadow: inset 15px -4px 0px 15px var(--main);
+    /* background: #FFCF37; */
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.switch-container input:checked+.slider {
+    background-color: var(--primary);
+}
+
+.switch-container input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 8px -4px 0px 0px var(--secondary);
+}

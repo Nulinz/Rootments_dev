@@ -1,0 +1,214 @@
+.sidebar .collapse li a.active {
+    color: var(--primary);
+}
+
+@media screen and (min-width:1140px) and (max-width: 1440px) {
+
+    aside .btnname,
+    aside .righticon i {
+        font-size: 12px !important;
+    }
+
+    aside .sidebar i {
+        width: 20%;
+        font-size: 15px;
+    }
+
+    aside .bxs-dashboard {
+        font-size: 18px !important;
+    }
+
+    aside .nav img {
+        height: 35px !important;
+    }
+
+    aside .sidebar .collapse ul {
+        padding-left: 25px !important;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+
+    /* Aside */
+    aside {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        z-index: 999 !important;
+        border-right: 1px solid #eee;
+        overflow: hidden scroll;
+    }
+
+    aside::-webkit-scrollbar {
+        display: none;
+    }
+
+    aside .sidebar {
+        padding: 10px 0px;
+        width: 100%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    aside .sidebar .nav {
+        border-radius: 12px;
+        padding: 5px;
+    }
+
+    aside .btnname {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 15% 84%;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        font-size: 14px;
+        font-weight: var(--fw-sm);
+    }
+
+    aside .sidebar i {
+        width: 20%;
+        font-size: 17px;
+    }
+
+    aside .bxs-dashboard {
+        font-size: 20px !important;
+    }
+
+    .sidebar ul li a {
+        color: var(--aside-li);
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        padding-bottom: 10px;
+        transition: var(--transition);
+    }
+
+    .sidebar .collapse li a:hover {
+        color: var(--primary);
+    }
+
+    .sidebar .approvalno {
+        background-color: var(--main);
+        color: var(--secondary);
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+
+    .approvalno h6 {
+        font-size: 15px;
+        font-weight: var(--fw-xl);
+    }
+
+    .asidebtn:hover .approvalno {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+}
+
+@media screen and (max-width: 1140px) {
+
+    aside {
+        display: none;
+    }
+
+    .sidebar i {
+        width: 20%;
+        font-size: 17px;
+    }
+    
+    .sidebar ul li .btnname {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 15% 84%;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        font-size: 14px;
+        font-weight: var(--fw-sm);
+    }
+
+    .sidebar ul li a {
+        color: var(--aside-li);
+        font-size: 12px;
+        font-weight: var(--fw-sm);
+        padding-top: 10px;
+        transition: var(--transition);
+    }
+
+    .sidebar ul li a:hover {
+        color: var(--primary);
+    }
+
+    .offcanvas-body {
+        padding: 0px;
+    }
+
+    .offcanvas {
+        background-color: var(--secondary) !important;
+    }
+
+    .sidebar .approvalno {
+        background-color: var(--main);
+        color: var(--secondary);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+
+    .approvalno h6 {
+        font-size: 15px;
+        font-weight: var(--fw-xl);
+    }
+
+    .asidebtn:hover .approvalno {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .offcanvas-body .icons {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+
+    .offcanvas-body .icons .headimg {
+        background-color: var(--secondary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .offcanvas-body .icons i {
+        font-size: 25px;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
+    }
+
+}

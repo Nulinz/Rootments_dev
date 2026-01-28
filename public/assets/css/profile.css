@@ -1,0 +1,467 @@
+@media screen and (min-width: 1098px) {
+
+    .sidebodydiv .sidebodyhead h4 {
+        color: var(--primary);
+        font-weight: var(--fw-lg);
+        font-size: 18px;
+    }
+
+    .mainbdy {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 24% 73%;
+        justify-content: space-between;
+        /* align-items: center; */
+        gap: 20px;
+    }
+
+    .row {
+        --bs-gutter-x: 0rem;
+    }
+
+    .maincard {
+        position: relative;
+        background-color: var(--secondary);
+        padding: 15px 15px 0px 15px;
+        border-radius: 6px;
+        box-shadow: var(--box-shadow);
+    }
+
+    .cardshead {
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    .cardsh5 h5 {
+        font-size: 16px;
+        font-weight: var(--fw-lg);
+        color: var(--main);
+        /* text-decoration: 2px underline var(--thead); */
+    }
+
+    .cards .row .profileimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+        background-color: #eee;
+    }
+
+    .cards .row .col-sm-12 h6 {
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        color: var(--thead);
+    }
+
+    .cards .row .col-sm-12 h5 {
+        font-size: 14px;
+        font-weight: var(--fw-lg);
+        color: var(--primary);
+    }
+
+    .editicon {
+        background-color: var(--main);
+        border: 2px solid var(--main);
+        height: 25px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        transition: var(--transition);
+        cursor: pointer;
+        border-radius: 0px 6px 0px 6px;
+    }
+
+    .topct h6 {
+        font-weight: var(--fw-xl);
+        color: var(--primary);
+    }
+
+    .editicon i {
+        color: var(--secondary);
+        font-size: 12px;
+    }
+
+    .editicon:hover {
+        background-color: var(--secondary);
+    }
+
+    .editicon:hover i {
+        color: var(--primary);
+    }
+
+    /* Tabs */
+    .proftabs {
+        margin-top: 10px;
+    }
+
+    .nav-tabs {
+        border: none;
+    }
+
+    .tab-content {
+        margin-top: 20px;
+    }
+
+    .aprvlcnt {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        padding: 3px 6px;
+    }
+
+    /* Project Porfile CSS */
+    .left-content {
+        border-right: 1px solid var(--input-border);
+    }
+
+    .left-content .table .lefthead {
+        color: var(--label);
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .left-content .table .leftcntnt {
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: var(--fw-lg);
+        margin-bottom: 5px;
+    }
+
+    /* Accordion */
+    .accordion-item {
+        border: none;
+        background-color: transparent;
+        color: var(--primary);
+    }
+    
+    /* Profile */
+    .descp {
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1098px) {
+
+    .sidebodydiv .sidebodyhead h4 {
+        color: var(--primary);
+        font-weight: var(--fw-lg);
+        font-size: 20px;
+    }
+
+    .mainbdy {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 24% 72%;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+
+    .row {
+        --bs-gutter-x: 0rem;
+    }
+
+    .maincard {
+        position: relative;
+        background-color: var(--secondary);
+        padding: 15px 15px 0px 15px;
+        border-radius: 6px;
+        box-shadow: var(--box-shadow);
+    }
+
+    .cardshead {
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .cardsh5 h5 {
+        font-size: 12px;
+        font-weight: var(--fw-lg);
+        color: var(--main);
+        /* text-decoration: 2px underline var(--thead); */
+    }
+
+    .cards .row .profileimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+        height: 100px !important;
+        width: 100px !important;
+        background-color: #eee;
+    }
+
+    .cards .row .col-sm-12 h6 {
+        font-size: 9px;
+        font-weight: var(--fw-md);
+        color: var(--thead);
+    }
+
+    .cards .row .col-sm-12 h5 {
+        font-size: 11px;
+        font-weight: var(--fw-lg);
+        color: var(--primary);
+    }
+
+    .editicon {
+        background-color: var(--main);
+        border: 2px solid var(--main);
+        height: 20px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        transition: var(--transition);
+        cursor: pointer;
+        border-radius: 0px 6px 0px 6px;
+    }
+
+    .topct h6 {
+        font-weight: var(--fw-xl);
+        color: var(--primary);
+    }
+
+    .editicon i {
+        color: var(--secondary);
+        font-size: 10px;
+    }
+
+    .editicon:hover {
+        background-color: var(--secondary);
+    }
+
+    .editicon:hover i {
+        color: var(--primary);
+    }
+
+    /* Tabs */
+    .proftabs {
+        margin-top: 15px;
+    }
+
+    .nav-tabs {
+        border: none;
+    }
+
+    .tab-content {
+        margin-top: 15px;
+    }
+
+    /* Task Porfile CSS */
+    .left-content {
+        border-right: 1px solid var(--input-border);
+    }
+
+    .left-content .table .lefthead {
+        color: var(--label);
+        font-size: 10px;
+        font-weight: var(--fw-md);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .left-content .table .leftcntnt {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: var(--fw-lg);
+        margin-bottom: 5px;
+    }
+
+    /* Accordion */
+    .accordion-item {
+        border: none;
+        background-color: transparent;
+        color: var(--primary);
+    }
+    
+    /* Profile */
+    .descp {
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .sidebodydiv .sidebodyhead h4 {
+        color: var(--primary);
+        font-weight: var(--fw-lg);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mainbdy {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .row {
+        --bs-gutter-x: 0rem !important;
+    }
+
+    .maincard {
+        position: relative;
+        background-color: var(--secondary);
+        padding: 15px 15px 0px 15px;
+        border-radius: 6px;
+        box-shadow: var(--box-shadow);
+        border: 1px solid var(--primary)00014;
+    }
+
+    .cardshead {
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    .cardsh5 h5 {
+        font-size: 14px;
+        font-weight: var(--fw-lg);
+        color: var(--main);
+        /* text-decoration: 2px underline var(--thead); */
+    }
+
+    .cards .row .profileimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+        background-color: #eee;
+    }
+
+    .cards .row .col-sm-12 h6 {
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        color: var(--thead);
+    }
+
+    .cards .row .col-sm-12 h5 {
+        font-size: 14px;
+        font-weight: var(--fw-lg);
+        color: var(--primary);
+    }
+
+    .editicon {
+        background-color: var(--main);
+        border: 2px solid var(--main);
+        height: 25px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        transition: var(--transition);
+        cursor: pointer;
+        border-radius: 0px 6px 0px 6px;
+    }
+
+    .topct h6 {
+        font-weight: var(--fw-xl);
+        color: var(--primary);
+    }
+
+    .editicon i {
+        color: var(--secondary);
+        font-size: 14px;
+    }
+
+    .editicon:hover {
+        background-color: var(--secondary);
+    }
+
+    .editicon:hover i {
+        color: var(--primary);
+    }
+
+    /* Tabs */
+    .proftabs {
+        margin-top: 20px;
+    }
+
+    .nav-tabs {
+        border: none;
+    }
+
+    .nav-tabs .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tab-content {
+        padding-left: 0px !important;
+        margin-top: 20px;
+    }
+
+    /* Project Porfile CSS */
+    .left-content {
+        border-right: none !important;
+        border-bottom: 1px solid #888;
+        margin-bottom: 15px;
+        padding-right: 0px !important;
+    }
+
+    .right-content {
+        margin-bottom: 15px;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .left-content .table .lefthead {
+        color: var(--label);
+        font-size: 10px;
+        font-weight: var(--fw-md);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .left-content .table .leftcntnt {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: var(--fw-lg);
+        margin-bottom: 5px;
+    }
+
+    /* Accordion */
+    .accordion-item {
+        border: none;
+        background-color: transparent;
+        color: var(--primary);
+    }
+    
+    /* Profile */
+    .descp {
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}

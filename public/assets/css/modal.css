@@ -1,0 +1,83 @@
+.modal-content {
+    background-color: var(--secondary) !important;
+}
+
+.modal h4 {
+    color: var(--primary);
+    font-weight: var(--fw-xl);
+    font-size: 18px;
+}
+
+.modal h2 {
+    color: var(--primary);
+    font-weight: var(--fw-xl);
+    font-size: 20px;
+}
+
+.modal h6 {
+    color: var(--label);
+    font-weight: var(--fw-md);
+    font-size: 14px;
+}
+
+.modal form label {
+    color: var(--label);
+    font-size: 14px;
+    font-weight: var(--fw-lg);
+}
+
+.modal form input,
+.modal form textarea,
+.modal form select {
+    border: 1px solid var(--input-border);
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: var(--fw-md);
+}
+
+.modal form select option {
+    font-size: 13px;
+    font-weight: var(--fw-lg);
+}
+
+.modal .table td,
+.modal .table th {
+    padding: 5px 5px;
+    background-color: transparent !important;
+    font-size: 13px;
+}
+
+.modal .table th {
+    color: var(--label);
+    font-weight: var(--fw-xl);
+    text-transform: uppercase;
+}
+
+/* jQuery Toastr */
+#toast-container>div {
+    opacity: 1 !important;
+}
+
+.toast-success {
+    background-color: var(--main) !important;
+    color: var(--secondary) !important;
+}
+
+@media screen and (min-width: 1098px) {
+    .modal .modal-img img {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1098px) {
+    .modal .modal-img img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal .modal-img img {
+        height: 150px;
+    }
+}

@@ -1,0 +1,750 @@
+@media screen and (min-width: 1400px) {
+
+    .cardmain {
+        padding-top: 15px;
+        width: 100%;
+        height: 435px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .cardmain::-webkit-scrollbar {
+        display: none;
+    }
+
+    .stages .col-sm-12 .stagemain {
+        padding: 0px 0px 10px 0px;
+        background-color: var(--stages-bg);
+        box-shadow: var(--box-shadow);
+        border-radius: 8px;
+    }
+
+    .todo,
+    .inprogress,
+    .onhold,
+    .completed {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .todoct,
+    .inprgct,
+    .onholdct,
+    .completedct {
+        border-radius: 8px 0px 0px 8px;
+        height: 40px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+
+    .todoct h6,
+    .inprgct h6,
+    .onholdct h6,
+    .completedct h6 {
+        font-size: 15px;
+        font-weight: var(--fw-md);
+    }
+
+    .todono,
+    .inprgno,
+    .onholdno,
+    .completedno {
+        border-radius: 0px 8px 0px 0px;
+        height: 40px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .todono h6,
+    .inprgno h6,
+    .onholdno h6,
+    .completedno h6 {
+        font-size: 18px;
+        font-weight: var(--fw-xl);
+    }
+
+    .todoct {
+        background-color: #001BDD;
+        color: var(--secondary);
+    }
+
+    .inprgct {
+        background-color: #ED6200;
+        color: var(--secondary);
+    }
+
+    .onholdct {
+        background-color: #620080;
+        color: var(--secondary);
+    }
+
+    .completedct {
+        background-color: #008000;
+        color: var(--secondary);
+    }
+
+    .todono {
+        background-color: #001add15;
+    }
+
+    .inprgno {
+        background-color: #ed630017;
+    }
+
+    .onholdno {
+        background-color: #62008010;
+    }
+
+    .completedno {
+        background-color: #00800018;
+    }
+
+    .todono h6 {
+        color: #7986E5;
+    }
+
+    .inprgno h6 {
+        color: #EE873F;
+    }
+
+    .onholdno h6 {
+        color: #620080;
+    }
+
+    .completedno h6 {
+        color: #008000;
+    }
+
+    .cardmain .row .draggablecard {
+        background-color: var(--secondary);
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        padding: 10px;
+        cursor: grab;
+        width: 90%;
+        /* height: 150px; */
+        margin: auto;
+    }
+
+    /* Common */
+    .taskname {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+    }
+
+    .taskname .tasknameleft {
+        display: flex;
+        /* align-items: center; */
+        justify-content: start;
+        gap: 5px;
+        width: 80%;
+    }
+
+    .tasknameleft i {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .tasknamefile a {
+        color: var(--primary) !important;
+    }
+
+    .tasknamefile a:hover {
+        color: #228BE6 !important;
+    }
+
+    .taskname h6 {
+        font-weight: var(--fw-lg);
+        font-size: 13px;
+        color: var(--primary);
+    }
+
+    .taskcategory h6 {
+        font-weight: var(--fw-lg);
+        font-size: 13px;
+    }
+
+    .taskcategory h6 .category {
+        color: #0427B9;
+    }
+
+    .taskcategory h6 .subcat {
+        color: #FF9900;
+    }
+
+    .taskdescp h6 {
+        font-weight: var(--fw-sm);
+        font-size: 11px;
+        color: var(--label);
+        margin-bottom: 5px !important;
+    }
+
+    .taskdescpdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .taskdescp h5 {
+        font-weight: var(--fw-xl);
+        font-size: 12px;
+        color: var(--primary);
+    }
+
+    .taskdescpdiv a,
+    .taskdescpdiv a i {
+        color: #008000;
+        font-size: 15px;
+    }
+
+    .taskdate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .taskdate .startdate,
+    .taskdate .starttime {
+        font-size: 10px;
+        font-weight: var(--fw-md);
+        color: var(--label);
+    }
+
+    .taskdate .enddate,
+    .taskdate .endtime {
+        font-size: 10px;
+        font-weight: var(--fw-md);
+        color: #ff0000;
+    }
+
+    .empty-message {
+        font-size: 12px;
+        text-align: center;
+        font-weight: var(--fw-md);
+    }
+
+    .last-dragged {
+        border: 2px solid #007bff;
+        background-color: #f0f8ff;
+        transition: background-color 0.3s ease, border 0.3s ease;
+    }
+
+    .dragging {
+        opacity: 0.8;
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1400px) {
+
+    .cardmain {
+        padding-top: 10px;
+        width: 100%;
+        height: 475px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .cardmain::-webkit-scrollbar {
+        display: none;
+    }
+
+    .stages .col-sm-12 .stagemain {
+        padding: 0px 0px 5px 0px;
+        background-color: var(--stages-bg);
+        box-shadow: var(--box-shadow);
+        border-radius: 8px;
+    }
+
+    .todo,
+    .inprogress,
+    .onhold,
+    .completed {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .todoct,
+    .inprgct,
+    .onholdct,
+    .completedct {
+        border-radius: 8px 0px 0px 8px;
+        height: 35px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .todoct h6,
+    .inprgct h6,
+    .onholdct h6,
+    .completedct h6 {
+        font-size: 13px;
+        font-weight: var(--fw-md);
+    }
+
+    .todono,
+    .inprgno,
+    .onholdno,
+    .completedno {
+        border-radius: 0px 8px 0px 0px;
+        height: 35px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .todono h6,
+    .inprgno h6,
+    .onholdno h6,
+    .completedno h6 {
+        font-size: 15px;
+        font-weight: var(--fw-xl);
+    }
+
+    .todoct {
+        background-color: #001BDD;
+        color: var(--secondary);
+    }
+
+    .inprgct {
+        background-color: #ED6200;
+        color: var(--secondary);
+    }
+
+    .onholdct {
+        background-color: #620080;
+        color: var(--secondary);
+    }
+
+    .completedct {
+        background-color: #008000;
+        color: var(--secondary);
+    }
+
+    .todono {
+        background-color: #001add15;
+    }
+
+    .inprgno {
+        background-color: #ed630017;
+    }
+
+    .onholdno {
+        background-color: #62008010;
+    }
+
+    .completedno {
+        background-color: #00800018;
+    }
+
+    .todono h6 {
+        color: #7986E5;
+    }
+
+    .inprgno h6 {
+        color: #EE873F;
+    }
+
+    .onholdno h6 {
+        color: #620080;
+    }
+
+    .completedno h6 {
+        color: #008000;
+    }
+
+    .cardmain .row .draggablecard {
+        background-color: var(--secondary);
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        padding: 8px;
+        cursor: grab;
+        width: 85% !important;
+        margin: auto;
+    }
+
+    /* Common */
+    .taskname {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+    }
+
+    .taskname .tasknameleft {
+        display: flex;
+        /* align-items: center; */
+        justify-content: start;
+        gap: 5px;
+        width: 80%;
+    }
+
+    .tasknameleft i {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .tasknamefile a {
+        color: var(--primary) !important;
+    }
+
+    .tasknamefile a:hover {
+        color: #228BE6 !important;
+    }
+
+    .taskname h6 {
+        font-weight: var(--fw-lg);
+        font-size: 11px;
+        color: var(--primary);
+    }
+
+    .taskcategory h6 {
+        font-weight: var(--fw-lg);
+        font-size: 13px;
+    }
+
+    .taskcategory h6 .category {
+        color: #0427B9;
+    }
+
+    .taskcategory h6 .subcat {
+        color: #FF9900;
+    }
+
+    .taskdescp h6 {
+        font-weight: var(--fw-sm);
+        font-size: 10px;
+        color: var(--label);
+        margin-bottom: 5px !important;
+    }
+
+    .taskdescp h5 {
+        font-weight: var(--fw-xl);
+        font-size: 10px;
+        color: var(--primary);
+    }
+
+    .taskdate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .taskdate .startdate,
+    .taskdate .starttime {
+        font-size: 8px;
+        font-weight: var(--fw-md);
+        color: var(--label);
+    }
+
+    .taskdate .enddate,
+    .taskdate .endtime {
+        font-size: 8px;
+        font-weight: var(--fw-md);
+        color: #ff0000;
+    }
+
+    .empty-message {
+        font-size: 10px;
+        text-align: center;
+        font-weight: var(--fw-md);
+    }
+
+    .last-dragged {
+        border: 2px solid #007bff;
+        background-color: #f0f8ff;
+        transition: background-color 0.3s ease, border 0.3s ease;
+    }
+
+    .dragging {
+        opacity: 0.8;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .cardmain {
+        padding-top: 10px;
+        width: 100%;
+        height: 350px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .stages .row .col-xl-3 {
+        margin-top: 10px;
+    }
+
+    .cardmain::-webkit-scrollbar {
+        display: none;
+    }
+
+    .stages .col-sm-12 .stagemain {
+        padding: 0px 0px 5px 0px;
+        background-color: var(--stages-bg);
+        box-shadow: var(--box-shadow);
+        border-radius: 8px;
+    }
+
+    .todo,
+    .inprogress,
+    .onhold,
+    .completed {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .todoct,
+    .inprgct,
+    .onholdct,
+    .completedct {
+        border-radius: 8px 0px 0px 8px;
+        height: 35px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .todoct h6,
+    .inprgct h6,
+    .onholdct h6,
+    .completedct h6 {
+        font-size: 13px;
+        font-weight: var(--fw-md);
+    }
+
+    .todono,
+    .inprgno,
+    .onholdno,
+    .completedno {
+        border-radius: 0px 8px 0px 0px;
+        height: 35px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .todono h6,
+    .inprgno h6,
+    .onholdno h6,
+    .completedno h6 {
+        font-size: 15px;
+        font-weight: var(--fw-xl);
+    }
+
+    .todoct {
+        background-color: #001BDD;
+        color: var(--secondary);
+    }
+
+    .inprgct {
+        background-color: #ED6200;
+        color: var(--secondary);
+    }
+
+    .onholdct {
+        background-color: #620080;
+        color: var(--secondary);
+    }
+
+    .completedct {
+        background-color: #008000;
+        color: var(--secondary);
+    }
+
+    .todono {
+        background-color: #001add15;
+    }
+
+    .inprgno {
+        background-color: #ed630017;
+    }
+
+    .onholdno {
+        background-color: #62008010;
+    }
+
+    .completedno {
+        background-color: #00800018;
+    }
+
+    .todono h6 {
+        color: #7986E5;
+    }
+
+    .inprgno h6 {
+        color: #EE873F;
+    }
+
+    .onholdno h6 {
+        color: #620080;
+    }
+
+    .completedno h6 {
+        color: #008000;
+    }
+
+    /* .cardmain .row {
+        display: grid !important;
+        justify-content: start;
+        grid-template-columns: repeat(10, 100%);
+        overflow: auto;
+    }
+
+    .cardmain .row::-webkit-scrollbar {
+        display: none;
+    } */
+
+    .cardmain .row .draggablecard {
+        background-color: var(--secondary);
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        padding: 8px;
+        cursor: grab;
+        width: 90% !important;
+        margin: auto;
+    }
+
+    /* Common */
+    .taskname {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .taskname .tasknameleft {
+        display: flex;
+        /* align-items: center; */
+        justify-content: start;
+        gap: 5px;
+        width: 80%;
+    }
+
+    .tasknameleft i {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .tasknamefile a {
+        color: var(--primary) !important;
+        font-size: 12px;
+    }
+
+    .tasknamefile a:hover {
+        color: #228BE6 !important;
+    }
+
+    .taskname h6 {
+        font-weight: var(--fw-lg);
+        font-size: 11px;
+        color: var(--primary);
+    }
+
+    .taskcategory h6 {
+        font-weight: var(--fw-lg);
+        font-size: 13px;
+    }
+
+    .taskcategory h6 .category {
+        color: #0427B9;
+    }
+
+    .taskcategory h6 .subcat {
+        color: #FF9900;
+    }
+
+    .taskdescp h6 {
+        font-weight: var(--fw-sm);
+        font-size: 10px;
+        color: var(--label);
+        margin-bottom: 5px !important;
+    }
+
+    .taskdescp h5 {
+        font-weight: var(--fw-xl);
+        font-size: 10px;
+        color: var(--primary);
+    }
+
+    .taskdate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .taskdate .startdate,
+    .taskdate .starttime {
+        font-size: 8px;
+        font-weight: var(--fw-md);
+        color: var(--label);
+    }
+
+    .taskdate .enddate,
+    .taskdate .endtime {
+        font-size: 8px;
+        font-weight: var(--fw-md);
+        color: #ff0000;
+    }
+
+    .empty-message {
+        font-size: 10px;
+        text-align: center;
+        font-weight: var(--fw-md);
+    }
+
+    .last-dragged {
+        border: 2px solid #007bff;
+        background-color: #f0f8ff;
+        transition: background-color 0.3s ease, border 0.3s ease;
+    }
+
+    .dragging {
+        opacity: 0.8;
+    }
+
+}
+
+.empty-message {
+    height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* .priority {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.priority i {
+    font-size: 12px;
+}
+
+.priority h6 {
+    font-weight: var(--fw-md);
+    font-size: 10px;
+    color: var(--primary);
+} */
