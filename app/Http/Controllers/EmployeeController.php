@@ -587,11 +587,11 @@ class EmployeeController extends Controller
             ->whereMonth('created_at', now()->month)
             ->whereYear('created_at', now()->year)
             ->selectRaw('
-             SUM(shoe_bill_mtd) as shoe_bill_mtd,
-            SUM(shoe_qty_mtd) as shoe_qty_mtd,
+             SUM(shoe_bill_ftd) as shoe_bill_ftd,
+            SUM(shoe_qty_ftd) as shoe_qty_ftd,
             SUM(shoe_ach) as shoe_ach,
-            SUM(shirt_bill_mtd) as shirt_bill_mtd,
-            SUM(shirt_qty_mtd) as shirt_qty_mtd,
+            SUM(shirt_bill_ftd) as shirt_bill_ftd,
+            SUM(shirt_qty_ftd) as shirt_qty_ftd,
             SUM(shirt_ach) as shirt_ach,
             shoe_tgt as shoe_tgt,
             shirt_tgt as shirt_tgt
@@ -602,11 +602,11 @@ class EmployeeController extends Controller
             ->where('emp_id', auth()->user()->id)
             ->whereMonth('created_at', now()->month)
             ->whereYear('created_at', now()->year)
-            // ->whereDate('created_at', now()->subDay())   
+            // ->whereDate('created_at', now()->subDay())
             ->selectRaw('
-                 SUM(b_mtd) as b_mtd,
-                SUM(q_mtd) as q_mtd,
-                SUM(v_mtd) as v_mtd,
+                 SUM(b_ftd) as b_ftd,
+                SUM(q_ftd) as q_ftd,
+                SUM(v_ftd) as v_ftd,
                 tgt_value  as tgt_value,
                 tgt_qty as tgt_qty,
                 SUM(ach_per) as ach_per,
@@ -643,13 +643,13 @@ class EmployeeController extends Controller
             ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
             ->whereIn('task_status', ['Completed', 'Assigned', 'Close', 'pending'])
             ->selectRaw('
-                    SUM(CASE 
-                        WHEN DATE(task_completed) > DATE(end_date) THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN DATE(task_completed) > DATE(end_date) THEN 1
+                        ELSE 0
                     END) AS delayed_task,
-                    SUM(CASE 
-                        WHEN DATE(task_completed) <= DATE(end_date) THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN DATE(task_completed) <= DATE(end_date) THEN 1
+                        ELSE 0
                     END) AS on_time
                 ')
             ->first();
@@ -657,13 +657,13 @@ class EmployeeController extends Controller
         $pending = Task::where('assign_to', auth()->id())
             ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
             ->selectRaw('
-                    SUM(CASE 
-                        WHEN task_status IN ("To Do", "In Progress","On Hold") THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN task_status IN ("To Do", "In Progress","On Hold") THEN 1
+                        ELSE 0
                     END) AS pending_task,
-                    SUM(CASE 
-                        WHEN task_status IN ("Completed", "Assigned","Close","pending") THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN task_status IN ("Completed", "Assigned","Close","pending") THEN 1
+                        ELSE 0
                     END) AS completed
                 ')
             ->first();
