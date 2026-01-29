@@ -587,14 +587,14 @@ class EmployeeController extends Controller
             ->whereMonth('created_at', now()->month)
             ->whereYear('created_at', now()->year)
             ->selectRaw('
-                shoe_bill_mtd as shoe_bill_mtd,
-                SUM(shoe_qty_mtd) as shoe_qty_mtd,
-                SUM(shoe_ach) as shoe_ach,
-                SUM(shirt_bill_mtd) as shirt_bill_mtd,
-                SUM(shirt_qty_mtd) as shirt_qty_mtd,
-                SUM(shirt_ach) as shirt_ach,
-                shoe_tgt as shoe_tgt,
-                shirt_tgt as shirt_tgt
+             SUM(shoe_bill_mtd) as shoe_bill_mtd,
+            SUM(shoe_qty_mtd) as shoe_qty_mtd,
+            SUM(shoe_ach) as shoe_ach,
+            SUM(shirt_bill_mtd) as shirt_bill_mtd,
+            SUM(shirt_qty_mtd) as shirt_qty_mtd,
+            SUM(shirt_ach) as shirt_ach,
+            shoe_tgt as shoe_tgt,
+            shirt_tgt as shirt_tgt
     ')
             ->first();
 
@@ -604,7 +604,7 @@ class EmployeeController extends Controller
             ->whereYear('created_at', now()->year)
             // ->whereDate('created_at', now()->subDay())   
             ->selectRaw('
-                b_mtd as b_mtd,
+                 SUM(b_mtd) as b_mtd,
                 SUM(q_mtd) as q_mtd,
                 SUM(v_mtd) as v_mtd,
                 tgt_value  as tgt_value,
