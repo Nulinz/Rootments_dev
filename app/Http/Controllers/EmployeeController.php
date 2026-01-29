@@ -604,7 +604,7 @@ class EmployeeController extends Controller
             ->whereYear('created_at', now()->year)
             // ->whereDate('created_at', now()->subDay())   
             ->selectRaw('
-                 SUM(b_mtd) as b_mtd,
+                 SUM(b_ftd) as b_ftd,
                 SUM(q_mtd) as q_mtd,
                 SUM(v_mtd) as v_mtd,
                 tgt_value  as tgt_value,
