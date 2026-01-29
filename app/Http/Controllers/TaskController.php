@@ -135,7 +135,7 @@ class TaskController extends Controller
             ->select('users.name', 'roles.role', 'roles.role_dept', 'users.id', 'users.store_id');
 
 
-        if (($r_id >= 12 && $r_id <= 19) or ($r_id == 50)) {
+        if (($r_id >= 12 && $r_id <= 19) or ($r_id == 50) or ($r_id == 66)) {
 
             if ($cluster_check == 0) {
                 $list->where('users.store_id', $user->store_id);
@@ -517,8 +517,8 @@ class TaskController extends Controller
         // } else {
         //     $task->update(['task_status' => $request->status]);
         // }
-        
-         if ($request->status == 'Close') {
+
+        if ($request->status == 'Close') {
 
             $first = DB::table('tasks')->where('f_id', $task->f_id)->orderBy('id', 'asc')->first();
 
@@ -741,8 +741,8 @@ class TaskController extends Controller
 
         return redirect()->back()->with('success', 'Task closed updated successfully.');
     }
-    
-        public function auto_task_list()
+
+    public function auto_task_list()
     {
         $user = Auth::user();
 
@@ -840,8 +840,8 @@ class TaskController extends Controller
     //     ]);
     //     // return view('');
     // }
-    
-      public function add_auto_task()
+
+    public function add_auto_task()
     {
 
         $user = auth()->user();
@@ -863,10 +863,10 @@ class TaskController extends Controller
             'roles' => $roles,
         ]);
     }
-    
+
     public function store_auto_task(Request $request)
     {
-    $request->validate([
+        $request->validate([
             'task_file' => 'nullable|file|max:5120|mimes:pdf,xlsx,xls,csv,jpg,jpeg,png,gif,doc,docx,txt'
         ]);
 

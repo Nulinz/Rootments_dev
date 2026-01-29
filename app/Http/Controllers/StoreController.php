@@ -371,7 +371,7 @@ class StoreController extends Controller
         $store = DB::table('stores as st')
             ->where('st.status', 1)
             ->when(true, function ($query) use ($auth_role, $cluster_check) {
-                if (in_array($auth_role, [1, 2, 6, 27])) {
+                if (in_array($auth_role, [1, 2, 6, 27, 66])) {
                     return $query->select('st.id as stores_id', 'st.store_name as stores_name');
                 }
 
@@ -386,7 +386,7 @@ class StoreController extends Controller
                 }
 
 
-                if (in_array($auth_role,  [11, 66])) {
+                if (in_array($auth_role,  [11])) {
                     return $query->join('cluster_store as cs', 'cs.store_id', '=', 'st.id')
                         ->join('m_cluster as ms', 'ms.id', '=', 'cs.cluster_id')
                         ->where('ms.cl_name', auth()->user()->id)

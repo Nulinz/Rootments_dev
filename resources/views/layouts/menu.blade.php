@@ -136,7 +136,7 @@
             <div class="collapse mt-3" id="collapse17">
                 <ul class="btn-toggle-nav list-unstyled pb-3 pe-0 ps-5 text-start">
 
-                    @if (!in_array($r_id, [1, 2, 6, 10, 11, 27]))
+                    @if (!in_array($r_id, [1, 2, 6, 10, 11, 27, 66]))
                         <li>
                             <a href="{{ route('store.walkin') }}" class="d-inline-flex text-decoration-none rounded">
                                 Walkin List

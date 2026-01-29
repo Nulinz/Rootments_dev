@@ -88,7 +88,7 @@
                             </div>
                         </div>
 
-                        @if (!in_array(auth()->user()->role_id, [1, 2, 6, 11]))
+                        @if (!in_array(auth()->user()->role_id, [1, 2, 6, 11, 66]))
                             <div class="col-sm-12 col-md-4 col-xl-4 inputs mb-3">
                                 <label for="employeeDropdownBtn">Employee (Optional)</label>
                                 <div class="col-sm-12 col-md-12 col-xl-12">
@@ -115,7 +115,8 @@
                         @endif
 
                         <div class="row mb-3">
-                            <p class="mb-0 text-muted" style="font-size:13.5px;"><span class="text-danger">Note:</span> To view all employee data, do not select any employee from the dropdown.</p>
+                            <p class="text-muted mb-0" style="font-size:13.5px;"><span class="text-danger">Note:</span> To view all employee data, do not select any employee from the
+                                dropdown.</p>
                         </div>
 
                     </div>
@@ -150,7 +151,7 @@
                             <thead>
                                 <tr>
                                     <th rowspan="3" style="vertical-align: middle; text-align: start; border-right: 1px solid #888;">
-                                        {{ in_array(auth()->user()->role_id, [1, 2, 6, 11]) ? 'Store Name' : 'Employee Name' }}
+                                        {{ in_array(auth()->user()->role_id, [1, 2, 6, 11, 66]) ? 'Store Name' : 'Employee Name' }}
                                     </th>
                                     <th colspan="6" style="border-right: 1px solid #888;">Shoe</th>
                                     <th colspan="6" style="border-right: 1px solid #888;">Shirt</th>
