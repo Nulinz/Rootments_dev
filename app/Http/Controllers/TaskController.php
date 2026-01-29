@@ -112,13 +112,11 @@ class TaskController extends Controller
 
     public function create_task(Request $req)
     {
-
         // $hasCluster = $req->is('task-add/hr');
 
         // if ($hasCluster) {
         //     $cluster=1;
         //  }
-
         $user = auth()->user();
         $r_id = $user->role_id;
 
@@ -135,7 +133,7 @@ class TaskController extends Controller
             ->select('users.name', 'roles.role', 'roles.role_dept', 'users.id', 'users.store_id');
 
 
-        if (($r_id >= 12 && $r_id <= 19) or ($r_id == 50) or ($r_id == 66)) {
+        if (($r_id >= 12 && $r_id <= 19) or ($r_id == 50)) {
 
             if ($cluster_check == 0) {
                 $list->where('users.store_id', $user->store_id);
@@ -161,15 +159,12 @@ class TaskController extends Controller
             $list->orderBy('users.role_id');
         }
 
-
         $list = $list->where('users.status', 1)->get();
         // $list = $list->get();
 
         // dd($list);
 
         $cat = DB::table('categories')->where('status', 1)->get();
-
-
         //  return $list;
 
         return view('task.add1', [
