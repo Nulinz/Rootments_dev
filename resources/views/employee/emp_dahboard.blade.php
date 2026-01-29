@@ -56,7 +56,7 @@
                 <table class="taskTable table-hover table-striped table">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            {{-- <th>#</th> --}}
                             <th>Shoe Bill</th>
                             <th>Shoe Qty</th>
                             <th>Shoe TGT</th>
@@ -65,7 +65,7 @@
                             <th>Shirt Qty</th>
                             <th>Shirt TGT</th>
                             <th>Shirt ACH</th>
-                            <th>Created On</th>
+                            {{-- <th>Created On</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -91,18 +91,18 @@
                 <table class="taskTable table-hover table-striped table">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            {{-- <th>#</th> --}}
                             <th>Total Bills</th>
                             <th>Total Quantity</th>
                             <th>Total Value</th>
-                            <th>Total KPI</th>
+                            {{-- <th>Total KPI</th>  --}}
                             <th>Taget Value</th>
                             <th>Target Qty</th>
                             <th>Total ACH</th>
                             <th>Total Walkin</th>
                             <th>Total Loss</th>
                             <th>Conversion</th>
-                            <th>Created on</th>
+                            {{-- <th>Created on</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -111,8 +111,8 @@
                             <td>{{ number_format($emp_perf_record->b_mtd, 0) }}</td>
                             <td>{{ number_format($emp_perf_record->q_mtd, 0) }}</td>
                             <td>{{ number_format($emp_perf_record->v_mtd, 0) }}</td>
-                            <td>{{ $emp_perf_record->tgt_value }}</td>
-                            <td>{{ $emp_perf_record->tgt_qty, 0 }}</td>
+                            <td>{{ $emp_perf_record->tgt_value ??  0}}</td>
+                            <td>{{ $emp_perf_record->tgt_qty ?? 0 }}</td>
                             <td>{{ number_format($emp_perf_record->ach_per, 0) }}</td>
                             <td>{{ number_format($emp_perf_record->w_ftd, 0) }}</td>
                             <td>{{ number_format($emp_perf_record->los_ftd, 0) }}</td>
