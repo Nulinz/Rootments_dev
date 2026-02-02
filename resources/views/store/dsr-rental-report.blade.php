@@ -314,7 +314,7 @@
                                                 if ($li->b_mtd > 0) {
                                                     $t_abv = $li->v_mtd / $li->b_mtd;
                                                 } else {
-                                                    $t = 0;
+                                                    $t_abv = 0;
                                                 }
                                             @endphp
                                             <td>{{ number_format($t_abv, 2) }}</td>
@@ -532,41 +532,55 @@
                                             <td>{{ date('d-m-Y', strtotime($li->created_at)) }}</td>
                                         </tr>
                                         @php
+                                            $ly_bill = (float) str_replace(',', '', $ly_d->ly_bill);
+                                            $ly_qty = (float) str_replace(',', '', $ly_d->ly_qty);
+                                            $ly_walk = (float) str_replace(',', '', $ly_d->ly_walk);
 
                                             $total_b_ftd += $li->b_ftd;
                                             $total_b_mtd += $li->b_mtd;
                                             $total_b_ly += $li->b_ly;
                                             $total_b_l2l += $li->b_ltl;
-                                            $b_l2l_calc = $ly_d->ly_bill != 0 ? ($total_b_mtd / $ly_d->ly_bill - 1) * 100 : 0;
+
+                                            $b_l2l_calc = $ly_bill != 0 ? ($total_b_mtd / $ly_bill - 1) * 100 : 0;
+
                                             $total_q_ftd += $li->q_ftd;
                                             $total_q_mtd += $li->q_mtd;
                                             $total_q_ly += $li->q_ly;
                                             $total_q_l2l += $li->q_ltl;
-                                            $q_l2l_calc = $ly_d->ly_qty != 0 ? ($total_q_mtd / $ly_d->ly_qty - 1) * 100 : 0;
+
+                                            $q_l2l_calc = $ly_qty != 0 ? ($total_q_mtd / $ly_qty - 1) * 100 : 0;
+
                                             $total_v_ftd += $li->v_ftd;
                                             $total_v_mtd += $li->v_mtd;
                                             $total_v_ly += $li->v_ly;
                                             $total_v_l2l += $li->v_ltl;
+
                                             $total_k_ftd += $li->k_ftd;
                                             $total_k_mtd += $li->k_mtd;
                                             $total_k_ly += $li->k_lymtd;
                                             $total_k_l2l += $li->k_ltl;
+
                                             $total_abs = $total_b_mtd != 0 ? $total_q_mtd / $total_b_mtd : 0;
                                             $total_abv = $total_b_mtd != 0 ? $total_v_mtd / $total_b_mtd : 0;
+
                                             $total_tgt_value += $li->tgt_value;
                                             $total_ach = $total_tgt_value != 0 ? ($total_v_mtd / $total_tgt_value) * 100 : 0;
+
                                             $total_tgt_qty += $li->tgt_qty;
+
                                             $total_w_ftd += $li->w_ftd;
                                             $total_w_mtd += $li->w_mtd;
                                             $total_w_ly += $li->w_ly;
                                             $total_w_l2l += $li->w_ltl;
-                                            // $w_l2l_calc = $ly_d->ly_walk != 0 ? ($total_w_mtd / $ly_d->ly_walk - 1) * 100 : 0;
-                                            $w_l2l_calc = (float) $ly_d->ly_walk != 0 ? ((float) $total_w_mtd / (float) $ly_d->ly_walk - 1) * 100 : 0;
+
+                                            $w_l2l_calc = $ly_walk != 0 ? ($total_w_mtd / $ly_walk - 1) * 100 : 0;
 
                                             $total_l_ftd += $li->los_ftd;
                                             $total_l_ftd_calc = $total_w_ftd - $total_b_ftd;
+
                                             $total_l_mtd += $li->los_mtd;
                                             $total_l_mtd_calc = $total_w_mtd - $total_b_mtd;
+
                                             $total_conv = $total_w_mtd != 0 ? ($total_b_mtd / $total_w_mtd) * 100 : 0;
                                         @endphp
                                     @endforeach

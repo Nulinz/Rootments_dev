@@ -596,11 +596,10 @@ class mobile_cnt extends Controller
         $resgination->request_to = $ApproverId;
         $res_save = $resgination->save();
 
-        $approver  = DB::table('users')->where('id', $ApproverId)->first();
-
-        if ($res_save && $approver && !empty($approver->device_token)) {
+        $req_token  = DB::table('users')->where('id', $ApproverId)->first();
 
 
+        if ($res_save && $req_token && !empty($req_token->device_token)) {
             $role_get = DB::table('roles')->where('id', $user_id->role_id)->first();
 
             $taskTitle = "Resignation Request";
@@ -617,6 +616,9 @@ class mobile_cnt extends Controller
                 'body' => $taskBody,
                 'c_by' => auth()->user()->id
             ]);
+
+
+                
 
             // dd($response);
         } // notification end
@@ -1365,15 +1367,15 @@ class mobile_cnt extends Controller
                 ->whereMonth('created_at', now()->month)
                 ->whereYear('created_at', now()->year)
                 ->selectRaw('
-            SUM(shoe_bill_mtd) as shoe_bill_mtd,
-            SUM(shoe_qty_mtd) as shoe_qty_mtd,
+                            SUM(shoe_bill_ftd) as shoe_bill_ftd,
+            SUM(shoe_qty_ftd) as shoe_qty_ftd,
             SUM(shoe_ach) as shoe_ach,
-            SUM(shirt_bill_mtd) as shirt_bill_mtd,
-            SUM(shirt_qty_mtd) as shirt_qty_mtd,
+            SUM(shirt_bill_ftd) as shirt_bill_ftd,
+            SUM(shirt_qty_ftd) as shirt_qty_ftd,
             SUM(shirt_ach) as shirt_ach,
             shoe_tgt as shoe_tgt,
             shirt_tgt as shirt_tgt
-        ')
+            ')
                 ->first();
 
             $emp_perf_record = DB::table('emp_perf_workupdate')
@@ -1381,9 +1383,9 @@ class mobile_cnt extends Controller
                 ->whereMonth('created_at', now()->month)
                 ->whereYear('created_at', now()->year)
                 ->selectRaw('
-                SUM(b_mtd) as b_mtd,
-                SUM(q_mtd) as q_mtd,
-                SUM(v_mtd) as v_mtd,
+                SUM(b_ftd) as b_ftd,
+                SUM(q_ftd) as q_ftd,
+                SUM(v_ftd) as v_ftd,
                 tgt_value  as tgt_value,
                 tgt_qty as tgt_qty,
                 SUM(ach_per) as ach_per,
@@ -1399,14 +1401,14 @@ class mobile_cnt extends Controller
                 ->whereMonth('created_at', now()->month)
                 ->whereYear('created_at', now()->year)
                 ->selectRaw('
-        SUM(shoe_bill_mtd) as shoe_bill_mtd,
-        SUM(shoe_qty_mtd) as shoe_qty_mtd,
-        SUM(shoe_ach) as shoe_ach,
-        SUM(shirt_bill_mtd) as shirt_bill_mtd,
-        SUM(shirt_qty_mtd) as shirt_qty_mtd,
-        SUM(shirt_ach) as shirt_ach,
-        shoe_tgt as shoe_tgt,
-        shirt_tgt as shirt_tgt
+                         SUM(shoe_bill_ftd) as shoe_bill_ftd,
+            SUM(shoe_qty_ftd) as shoe_qty_ftd,
+            SUM(shoe_ach) as shoe_ach,
+            SUM(shirt_bill_ftd) as shirt_bill_ftd,
+            SUM(shirt_qty_ftd) as shirt_qty_ftd,
+            SUM(shirt_ach) as shirt_ach,
+            shoe_tgt as shoe_tgt,
+            shirt_tgt as shirt_tgt
     ')
                 ->first();
 
@@ -1414,10 +1416,11 @@ class mobile_cnt extends Controller
                 ->where('emp_id', auth()->user()->id)
                 ->whereMonth('created_at', now()->month)
                 ->whereYear('created_at', now()->year)
+                // ->whereDate('created_at', now()->subDay())   
                 ->selectRaw('
-                SUM(b_mtd) as b_mtd,
-                SUM(q_mtd) as q_mtd,
-                SUM(v_mtd) as v_mtd,
+                SUM(b_ftd) as b_ftd,
+                SUM(q_ftd) as q_ftd,
+                SUM(v_ftd) as v_ftd,
                 tgt_value  as tgt_value,
                 tgt_qty as tgt_qty,
                 SUM(ach_per) as ach_per,

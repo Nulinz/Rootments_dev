@@ -71,12 +71,12 @@
                     <tbody>
                         <tr>
                             {{-- <td>{{ $loop->iteration }}</td> --}}
-                            <td>{{ number_format($emp_sale_record->shoe_bill_mtd, 0) }}</td>
-                            <td>{{ number_format($emp_sale_record->shoe_qty_mtd, 0) }}</td>
+                            <td>{{ number_format($emp_sale_record->shoe_bill_ftd, 0) }}</td>
+                            <td>{{ number_format($emp_sale_record->shoe_qty_ftd, 0) }}</td>
                             <td>{{ number_format($emp_sale_record->shoe_tgt, 0) }}</td>
                             <td>{{ number_format($emp_sale_record->shoe_ach, 0) }}</td>
-                            <td>{{ number_format($emp_sale_record->shirt_bill_mtd, 0) }}</td>
-                            <td>{{ number_format($emp_sale_record->shirt_qty_mtd, 0) }}</td>
+                            <td>{{ number_format($emp_sale_record->shirt_bill_ftd, 0) }}</td>
+                            <td>{{ number_format($emp_sale_record->shirt_qty_ftd, 0) }}</td>
                             <td>{{ number_format($emp_sale_record->shirt_tgt, 0) }}</td>
                             <td>{{ number_format($emp_sale_record->shirt_ach, 0) }}</td>
                             {{-- <td>{{ date('d-m-Y', strtotime($emp_sale_record->created_at)) }}</td> --}}
@@ -108,10 +108,10 @@
                     <tbody>
                         <tr>
                             {{-- <td>{{ $loop->iteration }}</td> --}}
-                            <td>{{ number_format($emp_perf_record->b_mtd, 0) }}</td>
-                            <td>{{ number_format($emp_perf_record->q_mtd, 0) }}</td>
-                            <td>{{ number_format($emp_perf_record->v_mtd, 0) }}</td>
-                            <td>{{ $emp_perf_record->tgt_value ??  0}}</td>
+                            <td>{{ number_format($emp_perf_record->b_ftd, 0) }}</td>
+                            <td>{{ number_format($emp_perf_record->q_ftd, 0) }}</td>
+                            <td>{{ number_format($emp_perf_record->v_ftd, 0) }}</td>
+                            <td>{{ $emp_perf_record->tgt_value ?? 0 }}</td>
                             <td>{{ $emp_perf_record->tgt_qty ?? 0 }}</td>
                             <td>{{ number_format($emp_perf_record->ach_per, 0) }}</td>
                             <td>{{ number_format($emp_perf_record->w_ftd, 0) }}</td>
