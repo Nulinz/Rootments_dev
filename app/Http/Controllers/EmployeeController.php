@@ -602,7 +602,7 @@ class EmployeeController extends Controller
             ->where('emp_id', auth()->user()->id)
             ->whereMonth('created_at', now()->month)
             ->whereYear('created_at', now()->year)
-            // ->whereDate('created_at', now()->subDay())   
+            // ->whereDate('created_at', now()->subDay())
             ->selectRaw('
                  SUM(b_ftd) as b_ftd,
                 SUM(q_ftd) as q_ftd,
@@ -643,13 +643,13 @@ class EmployeeController extends Controller
             ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
             ->whereIn('task_status', ['Completed', 'Assigned', 'Close', 'pending'])
             ->selectRaw('
-                    SUM(CASE 
-                        WHEN DATE(task_completed) > DATE(end_date) THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN DATE(task_completed) > DATE(end_date) THEN 1
+                        ELSE 0
                     END) AS delayed_task,
-                    SUM(CASE 
-                        WHEN DATE(task_completed) <= DATE(end_date) THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN DATE(task_completed) <= DATE(end_date) THEN 1
+                        ELSE 0
                     END) AS on_time
                 ')
             ->first();
@@ -657,13 +657,13 @@ class EmployeeController extends Controller
         $pending = Task::where('assign_to', auth()->id())
             ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
             ->selectRaw('
-                    SUM(CASE 
-                        WHEN task_status IN ("To Do", "In Progress","On Hold") THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN task_status IN ("To Do", "In Progress","On Hold") THEN 1
+                        ELSE 0
                     END) AS pending_task,
-                    SUM(CASE 
-                        WHEN task_status IN ("Completed", "Assigned","Close","pending") THEN 1 
-                        ELSE 0 
+                    SUM(CASE
+                        WHEN task_status IN ("Completed", "Assigned","Close","pending") THEN 1
+                        ELSE 0
                     END) AS completed
                 ')
             ->first();
